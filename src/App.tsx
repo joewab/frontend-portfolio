@@ -102,12 +102,12 @@ function App() {
         variants={gridContainerVariants} 
         initial="hidden"
         animate="show"
-        className='grid grid-cols-3 p-10 gap-10'>
+        className='app-container'>
         <motion.div 
             variants={gridSquareVariants}
             initial="hidden"
             animate="show"
-            className='bg-stone-100 aspect-square rounded-lg justify-center flex items-center gap-10'
+            className='hello-square'
           >
             <motion.div 
                 id='target'
