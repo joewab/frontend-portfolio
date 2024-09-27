@@ -138,11 +138,10 @@ function App() {
         </motion.div>
         <motion.div 
             variants={gridSquareVariants}
-            className='bg-slate-950 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
+            className='selfie-square'
           >
             <motion.div 
               variants={selfieVariant}
-              className='sm'
               >
               <img src={selfie} />
             </motion.div>
