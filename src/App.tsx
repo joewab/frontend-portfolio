@@ -7,7 +7,7 @@ import selfie from './assets/selfie.png'
 
 function App() {
  
-  const [scope, animate] = useAnimate();
+  const [scope] = useAnimate();
 
   // const handleAnimate = async () => {
   //   animate('#target', {x:150});
@@ -227,7 +227,10 @@ function App() {
           className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
         >
           <motion.div
-            variants={moreToComeVariant}
+            // variants={moreToComeVariant}
+            initial={{opacity:0}}
+            animate={{ opacity: 1}}
+            transition={{ repeat: Infinity, duration: 2, repeatType: 'reverse' }}
             className='text-4xl'
           >
             More to come...
