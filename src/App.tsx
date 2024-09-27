@@ -84,17 +84,6 @@ function App() {
     }
   }
 
-  const moreToComeVariant = { 
-    show: {
-      opacity: [0],
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        repeatType: "reverse"
-      }
-    }
-  }
-
   const selfieVariant = {
     hidden: {opacity: 0, y: -300}, 
     show: {
@@ -227,7 +216,6 @@ function App() {
           className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
         >
           <motion.div
-            // variants={moreToComeVariant}
             initial={{opacity:0}}
             animate={{ opacity: 1}}
             transition={{ repeat: Infinity, duration: 2, repeatType: 'reverse' }}
