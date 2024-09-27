@@ -123,7 +123,7 @@ function App() {
             initial="hidden"
             animate="show"
             variants={gridSquareVariants}
-            className='bg-slate-800 p-20 text-stone-100 text-2xl col-start-2 col-end-4 row-start-1 row-end-3 aspect-square rounded-lg text-left flex flex-col items-center gap-10'
+            className='intro-square'
           >
           <motion.div
             variants={textAppearVariant}
