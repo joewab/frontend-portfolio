@@ -6,6 +6,7 @@
   padding: 2rem;
   text-align: center;
   font-family: monospace;
+  overflow-x: hidden;
 }
 
 .app-container {
