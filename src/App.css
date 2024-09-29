@@ -92,8 +92,8 @@
       grid-column-start: 2;
       grid-column-end: 4;
       grid-row-start: 1;
-      grid-row-end: 3;
-      aspect-ratio: 1 / 1;
+      grid-row-end: 2;
+      aspect-ratio: 2 / 1;
       border-radius: 0.5rem;
       text-align: left;
       display: flex;

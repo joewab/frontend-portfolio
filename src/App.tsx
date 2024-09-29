@@ -17,11 +17,6 @@ function App() {
 
   const introText = `
     My name is Joe. I’m a full stack developer and also make some art. 
-    Most of my professional experience is with React, Angular, Typescript, and Java, 
-    working on enterprise scale applications. 
-    Recently I’ve also been playing around with AWS and Supabase as managed back ends, 
-    Framer Motion for animations, RAG as a way to provide additional context for AI queries, 
-    and I’m learning how to create browser extensions.
   `
 
   const nextText = `
@@ -187,20 +182,7 @@ function App() {
               <img src={paint} />
             </motion.div>
         </motion.div>
-        <motion.div 
-            variants={gridSquareVariants}
-            className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
-          >
-          <motion.div 
-              id='target'
-              className='text-stone-100 text-4xl'
-              initial={{opacity: 0, y: 100}}
-              animate={{opacity: 1, y:0}}
-              transition={{duration: 1, ease: "easeOut", delay: 1}}
-            >
-              <a href = {Pdf} target = "_blank">Resume</a>
-          </motion.div>
-        </motion.div>
+       
         <motion.div 
           variants={gridSquareVariants}
           className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
@@ -252,16 +234,17 @@ function App() {
         </motion.div>
         </motion.div>
         <motion.div 
-          variants={gridSquareVariants}
-          className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
-        >
-          <motion.div
-            initial={{opacity:0}}
-            animate={{ opacity: 1}}
-            transition={{ repeat: Infinity, duration: 2, repeatType: 'reverse' }}
-            className='text-4xl'
+            variants={gridSquareVariants}
+            className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
           >
-            More to come...
+          <motion.div 
+              id='target'
+              className='text-stone-100 text-4xl'
+              initial={{opacity: 0, y: 100}}
+              animate={{opacity: 1, y:0}}
+              transition={{duration: 1, ease: "easeOut", delay: 1}}
+            >
+              <a href = {Pdf} target = "_blank">Resume</a>
           </motion.div>
         </motion.div>
       </motion.section>
