@@ -3,7 +3,9 @@ import './App.css'
 import { useAnimate, motion } from "framer-motion";
 import "./styles.css";
 import Pdf from './assets/Joe_Anthony-Brown_resume.pdf'
-import selfie from './assets/selfie.png'
+import hand from './assets/hand.png'
+import laptop from './assets/laptop.png'
+import paint from './assets/paint.png'
 
 function App() {
  
@@ -85,16 +87,42 @@ function App() {
   }
 
   const selfieVariant = {
-    hidden: {opacity: 0, y: -300}, 
+    hidden: {opacity: 0, y: -500}, 
     show: {
       opacity: 1,
-      y: 0,
+      y: -120,
       transition: {
         duration: 3,
         delay: 2
       }
     }
   }
+
+  const laptopVariant = {
+    hidden: {opacity: 0, y: 300}, 
+    show: {
+      opacity: 1,
+      y: -100,
+      transition: {
+        duration: 3,
+        delay: 2
+      }
+    }
+  }
+
+  const paintVariant = {
+    hidden: {opacity: 0, y:-170, x: 110}, 
+    show: {
+      opacity: 1,
+      y: -170,
+      x: 110,
+      transition: {
+        duration: 3,
+        delay: 5
+      }
+    }
+  }
+
 
   return (
     <div className='flex flex-col gap-10 overflow-x-hidden' ref={scope}>
@@ -140,10 +168,23 @@ function App() {
             variants={gridSquareVariants}
             className='selfie-square'
           >
-            <motion.div 
+            <motion.div
+              className='absolute size-50'
               variants={selfieVariant}
               >
-              <img src={selfie} />
+              <img src={hand} />
+            </motion.div>
+            <motion.div
+              className='absolute'
+              variants={laptopVariant}
+              >
+              <img src={laptop} />
+            </motion.div>
+            <motion.div
+              className='absolute'
+              variants={paintVariant}
+              >
+              <img src={paint} />
             </motion.div>
         </motion.div>
         <motion.div 
