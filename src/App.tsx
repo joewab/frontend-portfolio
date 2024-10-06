@@ -183,70 +183,71 @@ function App() {
             </motion.div>
         </motion.div>
        
-        <motion.div 
+        <motion.a 
+          href='https://main.d3szxkwtdtrx3s.amplifyapp.com/'
+          target='_blank'
           variants={gridSquareVariants}
           className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
-        >
-        <motion.div 
-          id='target'
-          className='text-stone-100'
-          initial={{opacity: 0, x: -100}}
-          animate={{opacity: 1, x:0}}
-          transition={{duration: 1, ease: "easeOut", delay: 1}}
-        >
-          <a 
-            href='https://main.d3szxkwtdtrx3s.amplifyapp.com/'
-            target='_blank'
-            className='text-4xl'>
-              Goblin Fighter
-          </a>
-          <motion.div 
-            className='text-sm p-2 mt-3'
-            variants={nextTextAppearVariant}
-          >
-              {goblinFighterText}
-          </motion.div>
-        </motion.div>
-        </motion.div>
-        <motion.div 
-          variants={gridSquareVariants}
-          className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
-        >
-        <motion.div 
-          id='target'
-          className='text-stone-100 text-4xl'
-          initial={{opacity: 0, x: 100}}
-          animate={{opacity: 1, x:0}}
-          transition={{duration: 1, ease: "easeOut", delay: 1}}
-        >
-          <a 
-            href='https://github.com/joewab/GetSmArt/tree/main'
-            target='_blank'
-            className='text-4xl'>
-              GetSmArt
-          </a>
-          <motion.div 
-            className='text-sm p-2 mt-3'
-            variants={nextTextAppearVariant}
-          >
-              {getSmartText}
-          </motion.div>        
-        </motion.div>
-        </motion.div>
-        <motion.div 
-            variants={gridSquareVariants}
-            className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
           >
           <motion.div 
-              id='target'
-              className='text-stone-100 text-4xl'
-              initial={{opacity: 0, y: 100}}
-              animate={{opacity: 1, y:0}}
-              transition={{duration: 1, ease: "easeOut", delay: 1}}
+            id='target'
+            className='text-stone-100'
+            initial={{opacity: 0, x: -100}}
+            animate={{opacity: 1, x:0}}
+            transition={{duration: 1, ease: "easeOut", delay: 1}}
+          >
+            <div 
+              className='text-4xl'>
+                Goblin Fighter
+            </div>
+            <motion.div 
+              className='text-sm p-3 mt-3 text-left'
+              variants={nextTextAppearVariant}
             >
-              <a href = {Pdf} target = "_blank">Resume</a>
+                {goblinFighterText}
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </motion.a>
+        <motion.a 
+          href='https://github.com/joewab/GetSmArt/tree/main'
+          target='_blank'
+          variants={gridSquareVariants}
+          className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
+          >
+          <motion.div 
+            id='target'
+            className='text-stone-100 text-4xl'
+            initial={{opacity: 0, x: 100}}
+            animate={{opacity: 1, x:0}}
+            transition={{duration: 1, ease: "easeOut", delay: 1}}
+          >
+            <div 
+              className='text-4xl'>
+                GetSmArt
+            </div>
+            <motion.div 
+              className='text-sm p-3 mt-3 text-left'
+              variants={nextTextAppearVariant}
+            >
+                {getSmartText}
+            </motion.div>        
+          </motion.div>
+        </motion.a>
+        <motion.a 
+          href = {Pdf} target = "_blank"
+          variants={gridSquareVariants}
+          className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
+          >
+          <motion.div 
+            id='target'
+            className='text-stone-100 text-4xl'
+            initial={{opacity: 0, y: 100}}
+            animate={{opacity: 1, y:0}}
+            transition={{duration: 1, ease: "easeOut", delay: 1}}
+            >
+              <div>Resume</div>
+          </motion.div>
+        </motion.a>
       </motion.section>
     </div>
   )
