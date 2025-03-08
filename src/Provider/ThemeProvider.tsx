@@ -40,7 +40,7 @@ export const Navbar = () => {
     const { theme, setTheme } = context;
 
     function toggleTheme() {
-      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+      setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
     }
 
     return (
