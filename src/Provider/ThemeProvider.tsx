@@ -45,7 +45,6 @@ export const Navbar = () => {
 
     return (
         <nav className={ 'nav' + theme ==='light' ? 'nav-light' : 'nav-dark' } role="navigation">
-            <h1 className="mb-2">My Website</h1>
             <button
             className="w-20 rounded-md"
             onClick={toggleTheme}
