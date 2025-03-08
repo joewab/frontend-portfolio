@@ -20,13 +20,7 @@ function App() {
   const introText = `
     My name is Joe. I’m a full stack developer and also make some art. 
   `
-
-  const nextText = `
-    Here you'll find a couple projects and my resume. 
-    Most of my professional work cannot be shown here but I'll add
-    new personal projects as I create them. Cheers!
-  `
-
+  
   const goblinFighterText = `
     A simple UI that allows you to choose two monsters from DnD 5e
     and make them fight! Dice rolls are automated, monster stats are retrieved from the Dnd5e API,
