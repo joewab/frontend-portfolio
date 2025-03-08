@@ -6,6 +6,8 @@ import Pdf from './assets/Joe_Anthony-Brown_resume.pdf'
 import hand from './assets/hand.png'
 import laptop from './assets/laptop.png'
 import paint from './assets/paint.png'
+import Clock from './components/Clock.tsx'
+import ThemeProvider, { Navbar } from './Provider/ThemeProvider.tsx';
 
 function App() {
  
@@ -20,7 +22,7 @@ function App() {
   `
 
   const nextText = `
-    Below you can find a couple projects and my resume. 
+    Here you'll find a couple projects and my resume. 
     Most of my professional work cannot be shown here but I'll add
     new personal projects as I create them. Cheers!
   `
@@ -156,7 +158,11 @@ function App() {
           <motion.div
             variants={nextTextAppearVariant}
           >
-            {nextText}
+            <span>
+              <p className='inline'>Here you'll find a couple projects and my </p>
+              <a  href = {Pdf} target = "_blank" className='inline cursor-pointer text-cyan-400'>resume.</a>
+              <p>Most of my professional work cannot be shown here but I'll add new personal projects as I create them. Cheers!</p>
+            </span>
           </motion.div>
         </motion.div>
         <motion.div 
@@ -233,22 +239,18 @@ function App() {
             </motion.div>        
           </motion.div>
         </motion.a>
-        <motion.a 
-          href = {Pdf} target = "_blank"
-          variants={gridSquareVariants}
-          className='bg-slate-800 text-stone-100 text-2xl aspect-square rounded-lg justify-center flex items-center gap-10'
-          >
-          <motion.div 
-            id='target'
-            className='text-stone-100 text-4xl'
-            initial={{opacity: 0, y: 100}}
-            animate={{opacity: 1, y:0}}
-            transition={{duration: 1, ease: "easeOut", delay: 1}}
-            >
-              <div>Resume</div>
-          </motion.div>
-        </motion.a>
+        <motion.div
+         id='target'
+         className='clock-square bg-slate-500 justify-self-center'
+         initial={{opacity: 0, x: 100}}
+         animate={{opacity: 1, x:0}}
+         transition={{duration: 1, ease: "easeOut", delay: 1}}>
+          <Clock/>
+        </motion.div>
       </motion.section>
+      <ThemeProvider>
+        <Navbar/>
+      </ThemeProvider>
     </div>
   )
 }

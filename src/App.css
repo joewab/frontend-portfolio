@@ -9,6 +9,30 @@
   overflow-x: hidden;
 }
 
+body.light{
+  background-color: rgb(255, 255, 255);
+  color: rgb(91, 91, 91);
+
+  button{
+    background-color: #c7c7c7aa;
+    color: rgb(76, 76, 76);
+  }
+}
+
+body.dark{
+  background-color: black;
+  color: rgb(180, 180, 180);
+  
+  button{
+    background-color: #556a6faa;
+    color: white;
+  }
+}
+
+.nav-light {
+  background-color: #000000aa;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -71,6 +95,18 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       padding: 10;
       gap: 2rem;
+    }
+
+    .clock-square {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      justify-items: center;
+      display: flex;
+      width: 50rem;
+      padding: 5rem;
+      justify-content: center;
     }
 
     .hello-square {
